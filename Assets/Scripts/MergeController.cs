@@ -14,6 +14,14 @@ public class MergeController : MonoBehaviour
     // Variable para evitar que un mismo objeto se fusione dos veces
     private bool hasMerged = false;
 
+    public UIManager UIManager;
+
+
+    private void Start()
+    {
+        UIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
+
     // Se ejecuta cuando este objeto colisiona con otro
     private void OnCollisionEnter(Collision collision)
     {
@@ -36,6 +44,8 @@ public class MergeController : MonoBehaviour
                         // Marcamos ambos objetos como fusionados
                         hasMerged = true;
                         otherMerge.hasMerged = true;
+
+                        UIManager.AddMerge();
 
                         // Si hay un prefab de siguiente nivel, lo instanciamos en la posición de este objeto
                         if (nextLevelPrefab != null)

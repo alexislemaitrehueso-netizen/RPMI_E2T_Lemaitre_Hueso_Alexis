@@ -24,8 +24,9 @@ public class PlayerDetector : MonoBehaviour
     private void Update()
     {
         // Lanzamos un Raycast para detectar objetos mergeables
-        if (Physics.Raycast(transform.position, Vector3.up, detectionRange, LayerMask.GetMask("Mergeable")))
+        if (Physics.Raycast(transform.position, Vector3.forward, detectionRange, LayerMask.GetMask("Mergeable")))
         {
+            //print("Objeto delante");
             if (!isHighlighted)
             {
                 // Resalta al jugador cambiando su color
@@ -43,5 +44,14 @@ public class PlayerDetector : MonoBehaviour
                 isHighlighted = false;
             }
         }
+    }
+
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, detectionRange * Vector3.forward);
+
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7599818260086657084}
   - component: {fileID: 1728189526811127332}
   - component: {fileID: 7524011384838128461}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L1_Sphere
   m_TagString: Mergeable
   m_Icon: {fileID: 0}

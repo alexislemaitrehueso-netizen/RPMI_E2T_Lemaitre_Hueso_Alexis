@@ -10,14 +10,15 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI mergeCountText;
 
     // Contador interno de fusiones realizadas
-    private int mergeCount = 0;
+    public int mergeCount = 0;
 
     /// <summary>
     /// Método público que incrementa el contador de fusiones y actualiza el texto
     /// </summary>
     public void AddMerge()
     {
-        mergeCountText.text = "Merges: " + mergeCount;
         mergeCount++;
+        mergeCountText.text = "Merges: " + mergeCount;
+        
     }
 }

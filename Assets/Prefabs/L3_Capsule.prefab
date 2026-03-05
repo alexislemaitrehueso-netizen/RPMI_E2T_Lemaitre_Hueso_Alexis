@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 568393115379108220}
   - component: {fileID: -4571945973703855231}
   - component: {fileID: -2661542295249789291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L3_Capsule
-  m_TagString: Untagged
+  m_TagString: Mergeable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,3 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MergeController
   mergeLevel: 3
   nextLevelPrefab: {fileID: 0}
+  UIManager: {fileID: 0}
